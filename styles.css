@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 4fr;
+}
+
+.sidebar {
+  background-color: black;
+}
+
+.content {
+  background-color: grey;
+}
