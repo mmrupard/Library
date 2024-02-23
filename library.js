@@ -5,11 +5,6 @@ function Book(title, author, numPages, isRead) {
   this.author = author;
   this.numPages = numPages;
   this.isRead = isRead;
-
-  this.info = function () {
-    let readString = isRead ? "already read" : "not read yet";
-    return title + " by " + author + ", " + numPages + " pages, " + readString;
-  };
 }
 
 function addBookToLibrary(book) {
@@ -23,3 +18,21 @@ function removeBook(book) {
 function displayBooks() {
   console.table(library);
 }
+
+function createNewBook() {
+  const title = document.querySelector("#title");
+  const author = document.querySelector("#author");
+  const numPages = document.querySelector("#numPages");
+  const isRead = document.querySelector("#isRead");
+
+  let newBook = new Book(
+    title.value,
+    author.value,
+    numPages.value,
+    isRead.checked
+  );
+
+  addBookToLibrary(newBook);
+}
+
+document.querySelector("button").addEventListener("click", createNewBook);

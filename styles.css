@@ -1,6 +1,22 @@
+:root {
+  --bg-color: #121212;
+  --primary-color: #aa27ce;
+  --seconday-color: #787878;
+  --accent-color: #443dff;
+  --text-color: #c2c2c2;
+  --s: 14px;
+  --p: 16px;
+  --h: 18px;
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: var(--text-color);
 }
 
 .container {
@@ -11,9 +27,9 @@
 }
 
 .sidebar {
-  background-color: black;
+  background-color: var(--bg-color);
 }
 
 .content {
-  background-color: grey;
+  background-color: var(--seconday-color);
 }
